@@ -1,7 +1,7 @@
 .loading_site{
     width: 100dvw;
     height: 100dvh;
-    position: relative;
+    position: absolute;
     background: rgb(255, 255, 255);
     z-index: 99;
     display: flex;
