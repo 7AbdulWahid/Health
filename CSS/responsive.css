@@ -1,0 +1,133 @@
+body::-webkit-scrollbar {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.386);
+    border-radius: 100dvw;
+}
+
+
+@media (min-width: 1500px) {
+    .smooth-scroll {
+        margin: 0 10%;
+    }
+
+    :root {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .smooth-scroll {
+        margin: 0 5%;
+    }
+
+    :root {
+        font-size: 17.5px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    :root {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1000px) {
+    :root {
+        font-size: 13.5px;
+    }
+    #home{
+        height: fit-content;
+    }
+}
+
+@media (max-width: 720px) {
+    :root {
+        font-size: 10.5px;
+    }
+
+    #home {
+        flex-direction: column;
+        align-items: center;
+        /* height: fit-content; */
+    }
+
+    .txt_section {
+        width: 100%;
+    }
+
+    .image_section {
+        width: 60%;
+    }
+
+    .hed_mn,
+    .hed_top,
+    .para_hero {
+        text-align: center;
+        width: 100%;
+    }
+
+    .left_part {
+        top: 50%;
+        left: -10%;
+    }
+
+    .serv_card_section {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .serv_card {
+        width: 50%;
+        height: 15rem;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    .abt_txt .para2 {
+        width: 80%;
+    }
+
+    .abt_img,
+    .abt_txt {
+        width: 100%;
+    }
+
+    .abt_txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+    }
+
+    .thin_hed {
+        width: 80%;
+    }
+
+    #Why_us {
+        flex-direction: column;
+    }
+
+    .doc-cards-sec {
+        flex-wrap: wrap;
+    }
+
+    .doc-card {
+        width: 60%;
+        margin-bottom: 1rem;
+    }
+    .more_bg_img{
+        display: none;
+    }
+    .more_txt{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    #footer1{
+        display: none;
+    }
+}

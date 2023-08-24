@@ -1,0 +1,939 @@
+/* Linking fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* body {
+  width: 100%;
+  height:100%;
+} */
+
+
+/* Declaring the variables */
+:root {
+    /* fonts  */
+    --font-1: 'Roboto', sans-serif;
+    --font-2: 'Playfair Display', serif;
+
+    /* setting rem value  */
+    font-size: 16px;
+    /* font-size: 1.5dvw; */
+
+    /* colors  */
+    --clr-1: #1e90ff;
+    --clr-2: #03BDA2;
+    --clr-3: #454648;
+    --clr-4: #9B1C4B;
+    --clr-5: #1B2433;
+    --clr-6: #293241;
+    --clr-blk: #000;
+    --clr-wht: #fff;
+}
+
+
+/* styling the navbar  */
+nav {
+    width: 100%;
+    height: 10dvh;
+    display: flex;
+    background-color: var(--clr-wht);
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.logo {
+    width: 50%;
+    font-weight: bold;
+    color: var(--clr-1);
+    font-size: 150%;
+    padding-left: 3rem;
+    cursor: pointer;
+}
+
+.logo::after {
+    content: '+';
+    color: var(--clr-2);
+    padding: 0 0.25rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.links_part {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    transform: translate(0);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 10%;
+    transform: translate(-50%);
+}
+
+.links li a {
+    text-decoration: none;
+    color: var(--clr-blk);
+    font-family: var(--font-2);
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.links li a:hover {
+    color: var(--clr-2);
+}
+
+.btn1 {
+    background: var(--clr-1);
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--clr-wht);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn1:hover {
+    background: linear-gradient(to top, var(--clr-2), var(--clr-1));
+}
+
+.links_part .btn1 {
+    margin-right: 3rem;
+}
+
+/* Styling the hero section  */
+
+#home {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100dvh;
+    padding-top: 10dvh;
+}
+
+.image_section {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.image_section .bgimage {
+    width: 80%;
+}
+
+.bottom_part {
+    background: var(--clr-wht);
+    width: 35%;
+    position: absolute;
+    border-radius: 0.25rem;
+    top: 70%;
+    right: 25%;
+    /* transform: translate(20%, 200%); */
+    padding: 1%;
+    box-shadow: 0 0 1rem;
+}
+
+.hed1 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bottom_part .para1 {
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.bottom_part .btn1 {
+    margin: auto;
+}
+
+.left_part {
+    position: absolute;
+    background: var(--clr-wht);
+    width: 44%;
+    top: 40%;
+    left: 0%;
+    transform: translate(0%, -100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 0.75rem;
+    padding: 1rem 0.75rem;
+    box-shadow: 0 0 1rem;
+}
+
+.hero_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_txt {
+    margin: auto;
+}
+
+
+.hed2 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: start;
+}
+
+.para1 {
+    text-align: justify;
+    color: var(--clr-3);
+    font-size: 0.7rem;
+}
+
+.txt_section {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 2rem;
+}
+
+.hed_top {
+    color: var(--clr-3);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.hed_mn {
+    color: var(--clr-blk);
+    font-weight: bold;
+    font-size: 2rem;
+    width: 90%;
+}
+
+.para_hero {
+    color: var(--clr-3);
+    width: 80%;
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+.hero_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 85%;
+    margin-top: 1rem;
+}
+
+.btn2 {
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--clr-blk);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid var(--clr-1);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.btn2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-100%);
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-1);
+    transition: all 0.2s ease-in-out;
+    z-index: -1;
+}
+
+.btn2:hover::before {
+    transform: translate(0);
+}
+
+.btn2:hover {
+    color: var(--clr-wht);
+}
+
+.hero_nums {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.hero_num_prt {
+    width: 30%;
+}
+
+.num_hed {
+    font-weight: bold;
+    color: var(--clr-1);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.num_para {
+    color: var(--clr-3);
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+/* The Services section styling  */
+#services {
+    /* background: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading_1 {
+    width: fit-content;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 1rem;
+    white-space: nowrap;
+    position: relative;
+}
+
+.heading_1::after {
+    content: '';
+    position: absolute;
+    bottom: -2%;
+    left: 2%;
+    width: 60%;
+    height: 7%;
+    background: var(--clr-4);
+}
+
+.para2 {
+    color: var(--clr-3);
+    text-align: center;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 50%;
+}
+
+#services .para2 {
+    margin: 0.5rem;
+}
+
+.serv_card_section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.serv_card {
+    width: 25%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1.5rem 0.5rem;
+    border: 1px solid var(--clr-3);
+    border-radius: 0.5rem;
+}
+
+.serv_icon {
+    position: absolute;
+    top: 0;
+    transform: translate(0, -50%);
+    scale: 1.5;
+    background: var(--clr-wht);
+    width: 2rem;
+    text-align: center;
+    color: var(--clr-1);
+}
+
+.head2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+
+.serv_card_section .serv_card .para2 {
+    width: 100%;
+}
+
+.serv_card .btn2 {
+    padding: 0.25rem 2rem;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0, 50%);
+    background: var(--clr-wht);
+}
+
+/* About + Why us sections styling */
+
+#about,
+#Why_us {
+    margin-top: 2rem;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.abt_img {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.abt_img img {
+    width: 100%;
+}
+
+.abt_txt {
+    width: 50%;
+    padding: 0.25rem 1.25rem;
+}
+
+.abt_txt .heading_1 {
+    width: fit-content;
+    margin-left: 0;
+}
+
+.abt_txt .para2 {
+    width: 100%;
+    text-align: justify;
+}
+
+.thin_hed {
+    color: var(--clr-3);
+    font-size: 1.25rem;
+    font-family: var(--font-2);
+    letter-spacing: 0.1rem;
+}
+
+.abt_txt .thin_hed {
+    margin: 0.75rem 0;
+}
+
+.abt_cards {
+    width: 80%;
+    margin-left: 1rem;
+    padding: 0 0 1rem 2rem;
+    border-left: 0.1rem solid var(--clr-4);
+}
+
+.abt_card {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.abt_card::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background: var(--clr-4);
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    transform: translate(-50%);
+    box-shadow: 0 0 0 0.125rem var(--clr-wht),
+        0 0 0 0.2rem var(--clr-4);
+}
+
+.heading_2 {
+    font-weight: 900;
+    margin: 0.5rem 0;
+}
+
+#Why_us .abt_cards {
+    margin-top: 1rem;
+    border: none;
+}
+
+#Why_us .abt_card::before {
+    box-shadow: none;
+    background: url(https://banner2.cleanpng.com/20180417/irq/kisspng-check-mark-computer-icons-clip-art-green-tick-5ad67a4f365ef4.6115453415240054552227.jpg) no-repeat;
+    background-size: cover;
+}
+
+.A_doctors {
+    position: absolute;
+    right: 0;
+    top: 55%;
+    background-color: var(--clr-wht);
+    border-radius: 0.5rem;
+    width: 42.5%;
+    height: auto;
+    padding: 0.25rem 0.5rem;
+    box-shadow: 0 0 1rem;
+    scale: 0.9;
+}
+
+.D_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.D_card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    margin-top: 0.25rem;
+}
+
+.D_card .para2 {
+    white-space: nowrap;
+    color: var(--clr-blk);
+}
+
+.d-img {
+    aspect-ratio: 1;
+    width: 20%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 0.1rem solid var(--clr-2);
+}
+
+.d-img::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    aspect-ratio: 1;
+    width: 20%;
+    border-radius: 50%;
+    background: var(--clr-2);
+
+}
+
+.A_doctors .btn1 {
+    scale: 0.8;
+    margin: auto;
+    margin-top: 0.25rem;
+}
+
+.A_doctors .heading_2 {
+    margin-left: 0.15rem;
+}
+
+.A_doctors .para1 {
+    margin-bottom: 0.25rem;
+    margin-left: 0.15rem;
+}
+
+.d-txt {
+    padding-left: 0.5rem;
+    width: 80%;
+}
+
+.d-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Styling the Doctors section  */
+#doctors {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#doctors .heading_1 {
+    width: fit-content;
+}
+
+.doc-cards-sec {
+    width: fit-content;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.doc-card {
+    aspect-ratio: 0.875;
+    width: 22.5%;
+    position: relative;
+    box-shadow: 0 0 1rem #0000005c;
+    transition: all 0.25s ease-in-out;
+}
+
+.doc-card:hover {
+    scale: 1.05;
+    box-shadow: 0 0 1rem #00000080;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.doc-card .para2 {
+    width: 100%;
+    /* text-align: left; */
+    margin-bottom: 0.5rem;
+}
+
+.doc-txt {
+    background: var(--clr-wht);
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.doc_reviews {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    /* background-color: #1e90ff; */
+    padding-left: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doc_reviews .rating {
+    color: var(--clr-3);
+    font-weight: 900;
+    position: relative;
+}
+
+.num-revews {
+    color: var(--clr-3);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.rating::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Deep_yellow_star_229-126-63.svg/807px-Deep_yellow_star_229-126-63.svg.png) no-repeat;
+    background-size: cover;
+    aspect-ratio: 1;
+    height: 100%;
+}
+
+.doc-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The Last more section  */
+
+#more {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+
+}
+
+.more_bg_img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more_bg_img img {
+    width: 75%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.more_txt {
+    padding-left: 1rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.line-1 {
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: var(--clr-3);
+    line-height: 3rem;
+    font-stretch: expanded;
+    margin-top: 2rem;
+}
+
+.line-2 {
+    color: var(--clr-blk);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.client_words {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 75%;
+    margin: auto;
+    text-align: justify;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.cma {
+    position: absolute;
+    fill: var(--clr-1);
+    width: 2rem;
+}
+
+.top_comma {
+    top: 0;
+    left: 0;
+
+    transform-origin: bottom;
+    animation: vibrate 1s ease-in-out infinite;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translate(-110%, 30%) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(-110%, 30%) rotate(-5deg);
+    }
+
+    100% {
+        transform: translate(-110%, 30%) rotate(5deg);
+    }
+
+}
+
+.bottom_comma {
+    bottom: 0;
+    transform: translate(110%, -30%);
+    right: 0;
+    transform-origin: top;
+    animation: vibrate2 1s ease-in-out infinite;
+}
+
+@keyframes vibrate2 {
+    0% {
+        transform: translate(110%, -30%) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(110%, -30%) rotate(-5deg);
+    }
+
+    100% {
+        transform: translate(110%, -30%) rotate(5deg);
+    }
+
+}
+
+.cl_name {
+    margin-left: 12.5%;
+}
+
+/* Footer section styling */
+#footer1 {
+    background: var(--clr-5);
+    padding: 2rem 2rem 0rem 2rem;
+}
+
+.inr_footer1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid var(--clr-6);
+    padding-bottom: 1rem;
+}
+
+.fintro {
+    width: 40%;
+}
+
+.inr_footer1 {
+    height: 100%;
+}
+
+.fintro .logo {
+    padding: 0;
+    font-size: 1.75rem;
+}
+
+.fintro .para2 {
+    text-align: justify;
+    width: 100%;
+    color: var(--clr-wht);
+    margin: 1rem 0;
+    padding-right: 3rem;
+}
+
+.fintro .heading_2 {
+    width: 100%;
+    color: var(--clr-wht);
+}
+
+.femail {
+    background-color: #293241;
+    display: flex;
+    width: fit-content;
+    padding: 0.25rem;
+    border-radius: 10rem;
+    margin: 1rem 0;
+}
+
+.femail input {
+    background: transparent;
+    border: none;
+    font-family: var(--font-1);
+    color: var(--clr-wht);
+    padding-left: 1rem;
+}
+
+.femail input:focus {
+    border: none;
+    outline: none;
+
+}
+
+.femail .btn1 {
+    scale: 0.9;
+}
+
+
+
+.flink_prt {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flink {
+    color: var(--clr-wht);
+    display: grid;
+    gap: 1rem;
+}
+
+
+
+.flink .para2 {
+    color: var(--clr-wht);
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    white-space: nowrap;
+}
+
+.flink .para1 {
+    color: var(--clr-wht);
+    cursor: pointer;
+    width: fit-content;
+    position: relative;
+}
+
+.flink .para1::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.1rem;
+    width: 0%;
+    height: 0.07rem;
+    background-color: #fff;
+    transition: all 0.15s ease-in-out;
+
+}
+
+.flink .para1:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.flink .para1 a {
+    position: relative;
+    color: var(--clr-wht);
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+
+.flink .para1 a svg {
+    position: absolute;
+    top: 50%;
+    left: -1.5rem;
+    transform: translate(0, -50%);
+    width: 1.25rem;
+    fill: var(--clr-wht);
+}
+
+.social::before {
+    display: none;
+}
+
+#footer2{
+    width: 100%;
+    color: var(--clr-wht);
+    font-size: 0.8rem;
+    line-height: 4rem;
+    background: var(--clr-5);
+    text-align: center;
+}
