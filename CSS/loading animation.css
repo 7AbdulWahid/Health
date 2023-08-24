@@ -1,7 +1,11 @@
 .loading_site{
     width: 100dvw;
     height: 100dvh;
+<<<<<<< HEAD
     position: fixed;
+=======
+    position: absolute;
+>>>>>>> ed5407c702eb2555e96df390f1b0b0ecc621e28b
     background: rgb(255, 255, 255);
     z-index: 99;
     display: flex;
