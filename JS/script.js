@@ -59,8 +59,11 @@ gsap.to("nav", {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
 
-  
-window.onload = function() {
     document.getElementById("loader").style.display = "none";
-  };
+});
+
+window.onload = function () {
+    document.getElementById("loader").style.display = "none";
+};
